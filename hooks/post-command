@@ -10,7 +10,7 @@ export PATH=$PATH:.gitlfs/
 curl -Lsf -o git-lfs.tgz https://github.com/git-lfs/git-lfs/releases/download/v${GIT_LFS_RELEASE}/git-lfs-linux-amd64-v${GIT_LFS_RELEASE}.tar.gz
 mkdir git-lfs
 tar -xvzf git-lfs.tgz -C git-lfs
-mv git-lfs/git-lfs ~/.gitlfs/git-lfs
+mv git-lfs/git-lfs .gitlfs/git-lfs
 rm -rf git-lfs.tgz git-lfs/
 
 git lfs install
