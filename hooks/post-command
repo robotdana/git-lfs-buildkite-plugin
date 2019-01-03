@@ -19,3 +19,7 @@ ls ~/.bin/git-lfs
 git lfs install
 
 echo "Installed"
+
+#https://github.com/git-lfs/git-lfs/issues/2291#issuecomment-305887405
+rm .git/hooks/pre-push
+
