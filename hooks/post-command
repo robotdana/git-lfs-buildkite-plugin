@@ -12,3 +12,7 @@ mkdir git-lfs
 tar -xvzf git-lfs.tgz -C git-lfs
 mv git-lfs/git-lfs .bin/git-lfs
 rm -rf git-lfs.tgz git-lfs/
+
+git lfs install
+
+echo "Installed"
