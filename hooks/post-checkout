@@ -13,5 +13,7 @@ tar -xvzf git-lfs.tgz -C git-lfs
 mv git-lfs/git-lfs .gitlfs/git-lfs
 rm -rf git-lfs.tgz git-lfs/
 
-which git-lfs || echo "git lfs missing"
-which git-lfs && git lfs pull
+git lfs install --local
+git lfs pull
+git lfs uninstall --local
+rm -rf .gitlfs/
