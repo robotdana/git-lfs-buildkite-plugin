@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-GIT_LFS_RELEASE="2.6.1"
+GIT_LFS_RELEASE="2.8.0"
 
 mkdir .gitlfs/
 export PATH=$PATH:.gitlfs/
@@ -13,10 +13,5 @@ tar -xvzf git-lfs.tgz -C git-lfs
 mv git-lfs/git-lfs .gitlfs/git-lfs
 rm -rf git-lfs.tgz git-lfs/
 
-git lfs install
-
-echo "Installed"
-
-#https://github.com/git-lfs/git-lfs/issues/2291#issuecomment-305887405
-rm .git/hooks/pre-push
-
+which git-lfs || echo "git lfs missing"
+which git-lfs && git lfs pull
